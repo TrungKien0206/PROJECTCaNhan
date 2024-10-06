@@ -27,7 +27,7 @@ public class Library extends JFrame {
 
         for (String path : imagePaths) {
             URL resourceUrl = getClass().getClassLoader().getResource(path);
-            if (resourceUrl != null) { // Kiểm tra nếu tài nguyên tồn tại
+            if (resourceUrl != null) { 
                 ImageIcon originalIcon = new ImageIcon(resourceUrl);
                 
                 Image img = originalIcon.getImage(); 
