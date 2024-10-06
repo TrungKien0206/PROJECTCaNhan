@@ -10,7 +10,6 @@ class Background extends JPanel {
 
     public Background() {
         try {
-            // Sử dụng ClassLoader để tải ảnh từ package projectcanhan.image
             backgroundImage = ImageIO.read(getClass().getClassLoader().getResource("projectcanhan/image/letrungkien.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
@@ -20,7 +19,6 @@ class Background extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        // Vẽ hình nền nếu ảnh được tải thành công
         if (backgroundImage != null) {
             g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
         }

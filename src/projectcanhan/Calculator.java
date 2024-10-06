@@ -58,7 +58,6 @@ public class Calculator implements ActionListener{
         frame.setTitle("Calculator");
         frame.setSize(300, 490);
         frame.getContentPane().setLayout(null);
-//        frame.getContentPane().setBackground(Color.black);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
@@ -80,14 +79,12 @@ public class Calculator implements ActionListener{
         onRadioButton.setBounds(10, 95, 60, 40);
         onRadioButton.setSelected(true);
         onRadioButton.setFont(new Font("Arial", Font.BOLD, 14));
-//        onRadioButton.setBackground(Color.black);
         onRadioButton.setForeground(Color.white);
         frame.add(onRadioButton);
 
         offRadioButton.setBounds(10, 120, 60, 40);
         offRadioButton.setSelected(false);
         offRadioButton.setFont(new Font("Arial", Font.BOLD, 14));
-//        offRadioButton.setBackground(Color.black);
         offRadioButton.setForeground(Color.white);
         frame.add(offRadioButton);
 
@@ -289,7 +286,6 @@ public void actionPerformed(ActionEvent e) {
         label.setText("");
     }
 
-    // Handling special operations like square, square root, etc.
     else if (source == buttonSquare) {
         number = Double.parseDouble(textField.getText());
         double square = Math.pow(number, 2);
@@ -303,19 +299,19 @@ public void actionPerformed(ActionEvent e) {
 
 public void performCalculation() {
     switch (calculation) {
-        case 1: // Addition
+        case 1: 
             answer = number + Double.parseDouble(textField.getText());
             textField.setText(Double.toString(answer));
             break;
-        case 2: // Subtraction
+        case 2: 
             answer = number - Double.parseDouble(textField.getText());
             textField.setText(Double.toString(answer));
             break;
-        case 3: // Multiplication
+        case 3: 
             answer = number * Double.parseDouble(textField.getText());
             textField.setText(Double.toString(answer));
             break;
-        case 4: // Division
+        case 4: 
             answer = number / Double.parseDouble(textField.getText());
             textField.setText(Double.toString(answer));
             break;
